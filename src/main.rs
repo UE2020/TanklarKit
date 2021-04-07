@@ -119,6 +119,11 @@ async fn handle_event(
                             .color(0x002f94)
                             .unwrap();
                         embed = embed.field(
+                                EmbedFieldBuilder::new("id", server.id)
+                                    .unwrap()
+                                    .inline(),
+                            );
+                        embed = embed.field(
                             EmbedFieldBuilder::new("gamemode", server.gameMode)
                                 .unwrap()
                                 .inline(),
